@@ -1,0 +1,37 @@
+{
+  "name": "<%= npmName %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vue-cli-service dev",
+    "build": "vue-cli-service build",
+    "doc": "vue-cli-service doc --port 9090",
+    "doc-build": "vue-cli-service doc-build",
+    "screenshot": "vue-cli-service screenshot",
+    "prepublishOnly": "npm run doc-build"
+  },
+  "keywords": [
+    "vusion",
+    "vusion-block-template"
+  ],
+  "author": "",
+  "license": "MIT",
+  "vusion": {
+    "type": "block",
+    "title": "<%= title %>",
+    "name": "<%= name %>",
+    "category": "<%= category %>",
+    "base": "vue",
+    "ui": "",
+    "screenshots": [],
+    "team": "",
+    "auth": "public"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.0.5",
+    "vue": "^2.6.10",
+    "vue-cli-plugin-vusion": "^0.8.1",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
