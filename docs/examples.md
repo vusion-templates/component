@@ -1,6 +1,4 @@
-# <%= name %>
-
-<%= description %>
+### 基本用法
 
 ``` html
 <<%= name %>></<%= name %>>
