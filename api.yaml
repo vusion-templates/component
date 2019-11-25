@@ -1,6 +1,6 @@
 - name: <%= name %>
   title: <%= title %>
-  description: <%= description %>
+  description: description
   attrs:
     - name: value
       type: number

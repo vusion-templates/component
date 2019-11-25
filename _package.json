@@ -1,6 +1,6 @@
 {
   "name": "<%= name %>",
-  "description": "<%= description %>",
+  "description": "",
   "version": "0.1.0",
   "main": "./index.js",
   "keywords": [
