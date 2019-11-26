@@ -9,11 +9,17 @@
     "block"
   ],
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vusion/cloud-materials.git",
+    "directory": "src/components/u-some-component.vue"
+  },
+  "bugs": "http://github.com/vusion/cloud-materials/issues",
   "license": "MIT",
   "scripts": {
-    "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
-    "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
-    "screenshot": "../../../node_modules/.bin/vusion screenshot public/index.html --code-example",
+    "dev": "vue-cli-service doc --port 9090",
+    "build:doc": "vue-cli-service doc-build",
+    "screenshot": "vusion screenshot public/index.html --code-example",
     "prepublishOnly": "npm run build:doc && npm run screenshot vusion readme && vusion vetur && git add ."
   },
   "vusion": {
