@@ -9,12 +9,7 @@
     "component"
   ],
   "author": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vusion/cloud-materials.git",
-    "directory": "src/components/u-some-component.vue"
-  },
-  "bugs": "http://github.com/vusion/cloud-materials/issues",
+  "repository": "",
   "license": "MIT",
   "scripts": 
 <%
