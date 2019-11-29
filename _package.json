@@ -54,7 +54,9 @@ print(JSON.stringify(inVusionProject ? {} : {
 <%
 print(JSON.stringify(inVusionProject ? {} : {
   "@vue/cli-service": "^3.10.0",
-  "vue-cli-plugin-vusion": "^0.8.4"
+  "vue-cli-plugin-vusion": "^0.8.4",
+  "vue": "^2.6.10",
+  "cloud-ui.vusion": "^0.6.0"
 }, null, 2));
 %>,
   "peerDependencies": {
