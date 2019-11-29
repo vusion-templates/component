@@ -33,11 +33,11 @@ print(JSON.stringify(inVusionProject ? {
 %>,
   "babel":
 <%
-print(JSON.stringify(!inVusionProject ? {
+print(JSON.stringify(inVusionProject ? {} : {
   presets: [
       ['@vue/app'],
   ],
-} : {}, null, 2));
+}, null, 2));
 %>,
   "vusion": {
     "type": "component",
@@ -52,7 +52,7 @@ print(JSON.stringify(!inVusionProject ? {
   "dependencies": {},
   "devDependencies":
 <%
-print(JSON.stringify(!inVusionProject ? {} : {
+print(JSON.stringify(inVusionProject ? {} : {
   "@vue/cli-service": "^3.10.0",
   "vue-cli-plugin-vusion": "^0.8.4"
 }, null, 2));
