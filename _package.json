@@ -23,13 +23,21 @@ print(JSON.stringify(inVusionProject ? {
   "build:doc": "vue-cli-service doc-build",
   "screenshot": "vusion screenshot public/index.html --code-example --package",
   "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur && git add ."
-}, null, 4));
+}, null, 2));
 %>,
   "vuePlugins":
 <%
 print(JSON.stringify(inVusionProject ? {
   "resolveFrom": "../../../"
-} : {}, null, 4));
+} : {}, null, 2));
+%>,
+  "babel":
+<%
+print(JSON.stringify(inVusionProject ? {
+  presets: [
+      ['@vue/app'],
+  ],
+} : {}, null, 2));
 %>,
   "vusion": {
     "type": "component",
