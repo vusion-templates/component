@@ -1,5 +1,5 @@
 ### 基本用法
 
 ``` html
-<<%= name %>></<%= name %>>
+<<%= tagName %>></<%= tagName %>>
 ```
