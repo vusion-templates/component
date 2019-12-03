@@ -1,6 +1,6 @@
 - name: <%= tagName %>
   title: <%= title %>
-  description: description
+  description: 请在这里添加描述
   attrs:
     - name: value
       type: number

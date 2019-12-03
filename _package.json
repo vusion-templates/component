@@ -3,14 +3,14 @@
   "description": "",
   "version": "0.1.0",
   "main": "./index.js",
+  "author": "",
+  "repository": "",
+  "license": "MIT",
   "keywords": [
     "vusion",
     "material",
     "component"
   ],
-  "author": "",
-  "repository": "",
-  "license": "MIT",
   "scripts":
 <%
 print(JSON.stringify(inVusionProject ? {
