@@ -33,11 +33,11 @@ print(JSON.stringify(inVusionProject ? {
 %>,
   "babel":
 <%
-print(JSON.stringify(inVusionProject ? {} : {
+print(JSON.stringify(inVusionProject ? {
   presets: [
       ['@vue/app'],
   ],
-}, null, 2));
+} : {}, null, 2));
 %>,
   "vusion": {
     "type": "component",
