@@ -54,14 +54,14 @@ print(JSON.stringify(inVusionProject ? {
 <%
 print(JSON.stringify(inVusionProject ? {} : {
   "@vue/cli-service": "^3.10.0",
-  "vue-cli-plugin-vusion": "^0.8.4",
+  "vue-cli-plugin-vusion": "^0.9.0",
   "vue": "^2.6.10",
-  "cloud-ui.vusion": "^0.6.0"
+  "cloud-ui.vusion": "^0.6.4"
 }, null, 2));
 %>,
   "peerDependencies": {
     "vue": "^2.6.10",
-    "cloud-ui.vusion": "^0.6.0"
+    "cloud-ui.vusion": "^0.6.4"
   },
   "vetur": {
     "tags": "./vetur/tags.json",
