@@ -5,6 +5,7 @@
   "main": "./index.js",
   "author": "",
   "repository": "",
+  "homepage": "",
   "license": "MIT",
   "keywords": [
     "vusion",
@@ -16,12 +17,14 @@
 print(JSON.stringify(inVusionProject ? {
   "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
   "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
-  "screenshot": "vusion screenshot public/index.html --code-example --package",
+  "screenshot": "vusion screenshot public/index.html --code-example --smart-crop --package",
+  "deploy": "vusion deploy && vusion deploy screenshots",
   "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur"
 } : {
   "dev": "vue-cli-service doc --port 9090",
   "build:doc": "vue-cli-service doc-build",
-  "screenshot": "vusion screenshot public/index.html --code-example --package",
+  "screenshot": "vusion screenshot public/index.html --code-example --smart-crop --package",
+  "deploy": "vusion deploy && vusion deploy screenshots",
   "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur"
 }, null, 2));
 %>,
