@@ -17,15 +17,17 @@
 print(JSON.stringify(inVusionProject ? {
   "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
   "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
-  "screenshot": "vusion screenshot public/index.html --code-example --smart-crop --package",
+  "screenshot": "vusion screenshot public/index.html#examples --code-example --max-count 10 --smart-crop --package",
   "deploy": "vusion deploy && vusion deploy screenshots",
-  "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur"
+  "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur",
+  "release": "vusion publish"
 } : {
   "dev": "vue-cli-service doc --port 9090",
   "build:doc": "vue-cli-service doc-build",
-  "screenshot": "vusion screenshot public/index.html --code-example --smart-crop --package",
+  "screenshot": "vusion screenshot public/index.html#examples --code-example --max-count 10 --smart-crop --package",
   "deploy": "vusion deploy && vusion deploy screenshots",
-  "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur"
+  "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur",
+  "release": "vusion publish"
 }, null, 2));
 %>,
   "vuePlugins":
@@ -56,13 +58,15 @@ print(JSON.stringify(inVusionProject ? {
   "devDependencies":
 <%
 print(JSON.stringify(inVusionProject ? {} : {
-  "@vue/cli-service": "^3.10.0",
-  "vue-cli-plugin-vusion": "^0.9.2",
+  "@vue/cli-service": ">=3.10.0",
+  "vue-cli-plugin-vusion": "^0.9.14",
   "vue": "^2.6.10",
   "cloud-ui.vusion": "^0.6.6"
 }, null, 2));
 %>,
   "peerDependencies": {
+    "@vue/cli-service": ">=3.10.0",
+    "vue-cli-plugin-vusion": "^0.9.14",
     "vue": "^2.6.10",
     "cloud-ui.vusion": "^0.6.6"
   },
