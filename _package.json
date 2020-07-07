@@ -16,17 +16,21 @@
 <%
 print(JSON.stringify(inVusionProject ? {
   "dev": "../../../node_modules/.bin/vue-cli-service doc --port 9090",
+  "build:theme": "../../../node_modules/.bin/vue-cli-service library-build --dest dist-theme",
+  "build:raw": "../../../node_modules/.bin/vue-cli-service library-build --vusion-mode raw --dest dist-raw",
   "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
   "screenshot": "vusion screenshot public/index.html#examples --code-example --max-count 10 --smart-crop --package",
   "deploy": "vusion deploy && vusion deploy screenshots",
-  "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur",
+  "prepublishOnly": "npm run build:theme && npm run build:raw && npm run build:doc && npm run screenshot && vusion readme && vusion vetur",
   "release": "vusion publish"
 } : {
   "dev": "vue-cli-service doc --port 9090",
+  "build:theme": "vue-cli-service library-build --dest dist-theme",
+  "build:raw": "vue-cli-service library-build --vusion-mode raw --dest dist-raw",
   "build:doc": "vue-cli-service doc-build",
   "screenshot": "vusion screenshot public/index.html#examples --code-example --max-count 10 --smart-crop --package",
   "deploy": "vusion deploy && vusion deploy screenshots",
-  "prepublishOnly": "npm run build:doc && npm run screenshot && vusion readme && vusion vetur",
+  "prepublishOnly": "npm run build:theme && npm run build:raw && npm run build:doc && npm run screenshot && vusion readme && vusion vetur",
   "release": "vusion publish"
 }, null, 2));
 %>,
@@ -62,14 +66,14 @@ print(JSON.stringify(inVusionProject ? {} : {
   "core-js": "^3.6.5",
   "vue-cli-plugin-vusion": "^0.10.12",
   "vue": "^2.6.10",
-  "cloud-ui.vusion": "^0.9.5"
+  "cloud-ui.vusion": "^0.9.12"
 }, null, 2));
 %>,
   "peerDependencies": {
     "@vue/cli-service": "^4.4.1",
     "vue-cli-plugin-vusion": "^0.10.12",
     "vue": "^2.6.10",
-    "cloud-ui.vusion": "^0.9.5"
+    "cloud-ui.vusion": "^0.9.12"
   },
   "vetur": {
     "tags": "./vetur/tags.json",
