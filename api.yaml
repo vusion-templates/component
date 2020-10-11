@@ -1,6 +1,8 @@
 - name: <%= tagName %>
   title: <%= title %>
   description: 请在这里添加描述
+  labels: [demo]
+  icon: demo
   attrs:
     - name: value
       type: number
