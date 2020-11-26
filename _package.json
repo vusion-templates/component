@@ -19,9 +19,9 @@ print(JSON.stringify(inVusionProject ? {
   "build:theme": "../../../node_modules/.bin/vue-cli-service library-build --dest dist-theme",
   "build:raw": "../../../node_modules/.bin/vue-cli-service library-build --vusion-mode raw --dest dist-raw",
   "build:doc": "../../../node_modules/.bin/vue-cli-service doc-build",
-  "lcap": "node ./scripts/lcap",
   "screenshot": "vusion screenshot public/index.html#examples --code-example --max-count 10 --smart-crop --package",
   "deploy": "vusion deploy && vusion deploy screenshots",
+  "lcap": "vusion lcap",
   "prepublishOnly": "npm run build:theme && npm run build:raw && npm run build:doc && npm run screenshot && npm run lcap && git add . && vusion readme && vusion vetur",
   "release": "vusion publish"
 } : {
@@ -29,7 +29,7 @@ print(JSON.stringify(inVusionProject ? {
   "build:theme": "vue-cli-service library-build --dest dist-theme",
   "build:raw": "vue-cli-service library-build --vusion-mode raw --dest dist-raw",
   "build:doc": "vue-cli-service doc-build",
-  "lcap": "node ./scripts/lcap",
+  "lcap": "vusion lcap",
   "screenshot": "vusion screenshot public/index.html#examples --code-example --max-count 10 --smart-crop --package",
   "deploy": "vusion deploy && vusion deploy screenshots",
   "prepublishOnly": "npm run build:theme && npm run build:raw && npm run build:doc && npm run screenshot && npm run lcap && git add . && vusion readme && vusion vetur",
@@ -66,16 +66,16 @@ print(JSON.stringify(inVusionProject ? {
 print(JSON.stringify(inVusionProject ? {} : {
   "@vue/cli-service": "^4.4.1",
   "core-js": "^3.6.5",
-  "vue-cli-plugin-vusion": "^0.11.9",
+  "vue-cli-plugin-vusion": "^0.12.28",
   "vue": "^2.6.10",
-  "cloud-ui.vusion": "^0.9.12"
+  "cloud-ui.vusion": "^0.11.20"
 }, null, 2));
 %>,
   "peerDependencies": {
     "@vue/cli-service": "^4.4.1",
-    "vue-cli-plugin-vusion": "^0.11.9",
+    "vue-cli-plugin-vusion": "^0.12.28",
     "vue": "^2.6.10",
-    "cloud-ui.vusion": "^0.9.12"
+    "cloud-ui.vusion": "^0.11.20"
   },
   "vetur": {
     "tags": "./vetur/tags.json",
